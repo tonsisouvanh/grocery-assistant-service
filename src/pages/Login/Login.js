@@ -1,7 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Login.css";
-import {Link} from 'react-router-dom';
-const Login = () => {
+import { Link, useHistory} from "react-router-dom";
+import { connect } from "react-redux";
+import * as actions from "../../action/Account";
+// import validator from 'validator';
+
+const Login = ({ classes, ...props }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  // const history = useHistory();
+  
+
+
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    try {
+      
+    } catch (error) {
+      
+    }
+
+  };
+
+
+
+  useEffect(() => {
+    props.fetchAllAccounts();
+    // console.log(AccountList);
+  }, []);
+
   return (
     <>
       <div className="login-container">
@@ -14,15 +44,27 @@ const Login = () => {
             <form className="form-login">
               <div className="input-wrapper username">
                 <label>SĐT/Email</label>
-                <input type="text" placeholder=""></input>
+                <input
+                  type="text"
+                  placeholder=""
+                  onChange={(e) => setUsername(e.target.value)}
+                ></input>
               </div>
 
               <div className="input-wrapper password">
                 <label>Password</label>
-                <input type="password" placeholder=""></input>
+                <input
+                  type="password"
+                  placeholder=""
+                  onChange={(e) => setPassword(e.target.value)}
+                ></input>
               </div>
 
-              <button className="submit-btn" type="submit">
+              <button
+                className="submit-btn"
+                type="submit"
+                onClick={handleLogin}
+              >
                 Đăng nhập
               </button>
               <Link className="register-link" to="#">
@@ -41,4 +83,16 @@ const Login = () => {
   );
 };
 
-export default Login;
+// export default Login;
+
+const mapStateToProps = (state) => ({
+  AccountList: state.Account.list,
+});
+
+const mapActionToProps = {
+  fetchAllAccounts: actions.fetchAll,
+  deleteAccounts: actions.Delete,
+
+};
+
+export default connect(mapStateToProps, mapActionToProps)(Login);
