@@ -1,0 +1,45 @@
+@import "../../Style/variable";
+
+.category-container {
+  background-color: $white;
+  padding: 2rem 15rem;
+  width: 100%;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+
+  .category-list-container {
+    @include flexRow(space-around, center);
+    list-style: none;
+    font-family: $poppins;
+
+    .link {
+      text-decoration: none;
+      color: black;
+
+      .cate-cards {
+        @include flexCol(space-between, center);
+        height: 8rem;
+
+        .card-img {
+          width: 9rem;
+        }
+      }
+    }
+  }
+
+  .btn-container {
+    width: 100%;
+    @include flexRow(center, center);
+
+    .btn-view-all {
+      margin-top: 1.5rem;
+      background-color: $red;
+      font-family: $roboto;
+      font-weight: 700;
+      color: $white;
+      border: none;
+      padding: 0.7rem 1rem;
+      cursor: pointer;
+    }
+  }
+}

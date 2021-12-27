@@ -1,0 +1,72 @@
+.category-container {
+  background-color: #FFFFFF;
+  padding: 2rem 15rem;
+  width: 100%;
+  -webkit-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.category-container .category-list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.category-container .category-list-container .link {
+  text-decoration: none;
+  color: black;
+}
+
+.category-container .category-list-container .link .cate-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 8rem;
+}
+
+.category-container .category-list-container .link .cate-cards .card-img {
+  width: 9rem;
+}
+
+.category-container .btn-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.category-container .btn-container .btn-view-all {
+  margin-top: 1.5rem;
+  background-color: #e50914;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Category.css.map */

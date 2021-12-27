@@ -1,0 +1,81 @@
+@import "../../Style/variable";
+
+.nav-container {
+  width: 100%;
+  height: 10vh;
+  @include flexRow(space-between, center);
+  background-color: $red;
+  padding: 1rem 5rem;
+  font-family: $eng-font;
+  .link {
+    text-decoration: none;
+    color: $white;
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  .logo-container {
+    .logo {
+      width: 2.5rem;
+    }
+  }
+
+  .search-form {
+    .text-box {
+      border: none;
+      outline: none;
+      padding: 0.5rem 0.5rem;
+      width: 25rem;
+
+    }
+    .submit-btn{
+        width: 5rem;
+        padding: 0.5rem 0;
+        margin-left: 0.5rem;
+        border: none;
+        font-family: $eng-font;
+        background-color: $white;
+        border-radius: 0.1rem;
+        color: $black;
+    }
+  }
+  .profile-cart-wrapper {
+    @include flexRow(center, center);
+    .profile-container {
+      @include flexRow(center, center);
+      margin-right: 2rem;
+      color: $white;
+      .far {
+        font-size: 1.6rem;
+      }
+      p {
+        margin-left: 0.2rem;
+      }
+    }
+
+    .cart-container {
+      .cart-wrapper {
+        .cart-link {
+          @include flexRow(flex-start, center);
+          p {
+            font-size: 0.7rem;
+            margin-left: 0.2rem;
+          }
+          .fas {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .sell-register-wrapper {
+        margin-top: 0.8rem;
+        border: solid 2px $white;
+        padding: 0 1rem;
+        border-radius: 0.5rem;
+        p {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

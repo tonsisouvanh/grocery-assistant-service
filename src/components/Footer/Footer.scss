@@ -1,0 +1,145 @@
+@import "../../Style/variable";
+
+.footer-container {
+  font-family: $roboto;
+  .top-footer {
+    background-color: $red;
+    width: 100%;
+    padding: 0.5rem 2rem;
+    @include flexRow(flex-end, center);
+    p {
+      font-family: $roboto;
+      color: $white;
+      font-weight: 400;
+      font-size: 18px;
+    }
+    .social-media {
+      .social-link {
+        margin-left: 1.2rem;
+        img {
+          width: 1.8rem;
+          box-shadow: 0px 16px 22px -3px rgba(0, 0, 0, 0.1),
+            0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+          border-radius: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .bottom-footer {
+    background-color: $white;
+    color: $black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 2rem;
+    gap: 3rem 5rem;
+    font-weight: 900;
+
+    .col {
+      justify-self: center;
+      h2 {
+        font-size: 23px;
+        text-decoration: underline;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 18px;
+      }
+      .paragraph {
+        width: 22rem;
+        font-size: 18px;
+        line-height: 2rem;
+      }
+      .contact-row {
+        @include flexRow(start, center);
+        margin-bottom: 2rem;
+        .fas {
+          margin-right: 0.5rem;
+        }
+      }
+      ul {
+        li {
+          margin-bottom: 0.8rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+  .copyright {
+    background-color: #3e4450;
+    @include flexRow(start, center);
+    border-top: 1px solid #4f5563;
+    color: $white;
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+    .fas {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+// @media screen and (max-width: 360px) {
+//   .footer-container {
+//     .top-footer {
+//       padding: 0.5rem 2rem;
+//       p {
+//         font-size: 15px;
+//       }
+//       .social-media {
+//         .social-link {
+//           margin-left: 1rem;
+//           img {
+//             width: 1.6rem;
+//           }
+//         }
+//       }
+//     }
+//     .bottom-footer {
+//       background-color: #3e4450;
+//       color: $white;
+//       display: grid;
+//       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+//       padding: 2rem 1rem;
+//       gap: 3rem 0;
+//       .col {
+//         width: 14rem;
+//         justify-self: center;
+//         h2 {
+//           font-size: 23px;
+//           margin-bottom: 1rem;
+//         }
+//         p {
+//           font-size: 18px;
+//         }
+//         .paragraph {
+//           width: 13rem;
+//           font-size: 14px;
+//         }
+//         .contact-row {
+//           @include flexRow(start, center);
+//           margin-bottom: 2rem;
+//           .fas {
+//             margin-right: 0.5rem;
+//           }
+//         }
+//         ul {
+//           li {
+//             margin-bottom: 0.8rem;
+//           }
+//         }
+//       }
+//     }
+//     .copyright {
+//       background-color: #3e4450;
+//       @include flexRow(start, center);
+//       border-top: 1px solid #4f5563;
+//       color: $white;
+//       font-size: 1rem;
+//       padding: 0.3rem 1rem;
+//       .fas {
+//         margin-right: 0.5rem;
+//       }
+//     }
+//   }
+// }

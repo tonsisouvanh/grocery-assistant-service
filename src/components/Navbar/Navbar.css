@@ -1,0 +1,114 @@
+.nav-container {
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e50914;
+  padding: 1rem 5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-container .link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.nav-container .link p {
+  font-size: 0.9rem;
+}
+
+.nav-container .logo-container .logo {
+  width: 2.5rem;
+}
+
+.nav-container .search-form .text-box {
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.5rem;
+  width: 25rem;
+}
+
+.nav-container .search-form .submit-btn {
+  width: 5rem;
+  padding: 0.5rem 0;
+  margin-left: 0.5rem;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FFFFFF;
+  border-radius: 0.1rem;
+  color: #222222;
+}
+
+.nav-container .profile-cart-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-container .profile-cart-wrapper .profile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2rem;
+  color: #FFFFFF;
+}
+
+.nav-container .profile-cart-wrapper .profile-container .far {
+  font-size: 1.6rem;
+}
+
+.nav-container .profile-cart-wrapper .profile-container p {
+  margin-left: 0.2rem;
+}
+
+.nav-container .profile-cart-wrapper .cart-container .cart-wrapper .cart-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-container .profile-cart-wrapper .cart-container .cart-wrapper .cart-link p {
+  font-size: 0.7rem;
+  margin-left: 0.2rem;
+}
+
+.nav-container .profile-cart-wrapper .cart-container .cart-wrapper .cart-link .fas {
+  font-size: 1.5rem;
+}
+
+.nav-container .profile-cart-wrapper .cart-container .sell-register-wrapper {
+  margin-top: 0.8rem;
+  border: solid 2px #FFFFFF;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+}
+
+.nav-container .profile-cart-wrapper .cart-container .sell-register-wrapper p {
+  font-weight: 500;
+}
+/*# sourceMappingURL=Navbar.css.map */
