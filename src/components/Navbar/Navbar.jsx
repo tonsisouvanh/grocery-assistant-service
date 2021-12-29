@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
 import "./Navbar.css";
 import logo from "../../images/logo.png";
+
 const Navbar = () => {
   return (
     <>
@@ -18,7 +19,9 @@ const Navbar = () => {
             placeholder="Search for product"
             name="search"
           />
-          <button className="submit-btn" type="submit">Search</button>
+          <button className="submit-btn" type="submit">
+            Search
+          </button>
         </form>
 
         <div className="profile-cart-wrapper">
@@ -38,8 +41,8 @@ const Navbar = () => {
             </div>
 
             <div className="sell-register-wrapper">
-              <Link to="#" className="link">
-                <p>Sell with us</p>
+              <Link to="/pages/collaborators/register" className="link">
+                <p>Collaborate with us</p>
               </Link>
             </div>
           </div>
