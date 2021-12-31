@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-
 import "./Home.css";
 import Banner from "../../components/Banner/Banner";
 import Category from "../../components/Category/Category";
 import UserService from "../../services/user.service";
 
 const Home = () => {
-
   const [accounts, setAccounts] = useState([]);
 
   // useEffect(() => {
@@ -29,9 +27,8 @@ const Home = () => {
 
   return (
     <>
-      {/* <Category></Category> */}
-      {/* <Banner></Banner> */}
-      Home
+      <Category></Category>
+      <Banner></Banner>
     </>
   );
 };

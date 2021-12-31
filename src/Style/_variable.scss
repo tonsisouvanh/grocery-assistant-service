@@ -1,24 +1,28 @@
 //colors
+$blue: #0078d7;
 $red: #e50914;
-$white: #FFFFFF;
+$white: #ffffff;
 $black: #222222;
+$colorPlaceholder: #93989b;
+$colorBorderBottom: #d8d8d8;
 // $gray-text: #969696;
 // $footer-bg: #F8F8F8;
 // $card-text: #4A4A4A;
 //fonts
-$eng-font: 'Montserrat',sans-serif;
-$roboto: 'Roboto',sans-serif;
-$poppins: 'Poppins', sans-serif;
+$Mont: "Montserrat", sans-serif;
+$roboto: "Roboto", sans-serif;
+$poppins: "Poppins", sans-serif;
+$vietnam: "Be Vietnam Pro", sans-serif;
 // $vn: ''
-@mixin flexRow($justify, $align){
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
+@mixin flexRow($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
 }
 
-@mixin flexCol($justify, $align){
-    display: flex;
-    flex-direction: column;
-    justify-content: $justify;
-    align-items: $align;
+@mixin flexCol($justify, $align) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
 }

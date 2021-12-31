@@ -1,0 +1,93 @@
+@import "../../../Style/variable";
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  @include flexRow(center, center);
+  font-family: $vietnam;
+
+  color: #716c6b;
+
+  .login-wrapper {
+    min-width: 60rem;
+    min-height: 70vh;
+    background-color: #fcfcfc;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    .left-col-container {
+      @include flexCol(center, center);
+      .greet-text {
+        font-size: 1.2rem;
+        font-weight: bold;
+        p {
+          margin-top: 0.5rem;
+        }
+      }
+      .form-wrapper {
+        .input-field {
+            margin-bottom: 1rem;
+        }
+        .select-account-container {
+          @include flexCol(center, center);
+          p{
+              margin-bottom: 0.5rem;
+          }
+          .form-select {
+            font-family: $vietnam;
+          }
+        }
+        @include flexCol(center, center);
+        margin-top: 4rem;
+        font-family: $poppins;
+
+        .input {
+          margin-top: 0.5rem;
+          border: 1px solid rgb(211, 211, 211);
+          outline: none;
+          padding: 0.3rem;
+          color: #716c6b;
+          width: 15rem;
+        }
+        .login-btn {
+          background-color: $red;
+          border: none;
+          color: $white;
+          padding: 0.8rem 0;
+          width: 15rem;
+          font-size: 1rem;
+          font-family: $vietnam;
+          cursor: pointer;
+        }
+      }
+      .link {
+        margin-top: 1rem;
+        text-decoration: underline;
+        p {
+          font-size: 0.8rem;
+          color: $blue;
+        }
+      }
+    }
+
+    .right-col-container {
+      background-color: $red;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+      @include flexCol(center, center);
+
+      .fab {
+        font-size: 10rem;
+        color: $white;
+      }
+      p {
+        font-family: $poppins;
+        color: $white;
+      }
+    }
+  }
+}

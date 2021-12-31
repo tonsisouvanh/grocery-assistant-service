@@ -1,0 +1,37 @@
+@import "../../../Style/variable";
+
+.partner-container {
+  @include flexCol(center, center);
+  min-height: 100vh;
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60rem;
+    column-gap: 10rem;
+    :hover {
+      opacity: 80%;
+    }
+    img {
+      width: 20rem;
+    }
+    .card {
+      background-color: #fc5151;
+      @include flexCol(center, center);
+      border-radius: 2rem;
+      padding: 2rem;
+      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+      cursor: pointer;
+
+      p {
+        font-family: $vietnam;
+        color: $white;
+        font-weight: 900;
+        font-size: 1.8rem;
+      }
+    }
+    .merchant-card {
+    }
+    .shipper-card {
+    }
+  }
+}

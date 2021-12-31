@@ -12,20 +12,33 @@
           align-items: center;
   background-color: #e50914;
   padding: 1rem 5rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: #ffffff;
 }
 
 .nav-container .link {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .nav-container .link p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
-.nav-container .logo-container .logo {
-  width: 2.5rem;
+.nav-container .logo-container {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.nav-container .logo-container .logo-text .s-text {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.nav-container .logo-container .logo-text .apostrophe {
+  font-weight: 900;
+  font-size: 2.5rem;
 }
 
 .nav-container .search-form .text-box {
@@ -40,10 +53,10 @@
   padding: 0.5rem 0;
   margin-left: 0.5rem;
   border: none;
-  font-family: "Montserrat", sans-serif;
-  background-color: #FFFFFF;
+  background-color: #a90000;
   border-radius: 0.1rem;
-  color: #222222;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .nav-container .profile-cart-wrapper {
@@ -69,7 +82,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin-right: 2rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .nav-container .profile-cart-wrapper .profile-container .far {
@@ -78,6 +91,18 @@
 
 .nav-container .profile-cart-wrapper .profile-container p {
   margin-left: 0.2rem;
+}
+
+.nav-container .profile-cart-wrapper .cart-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav-container .profile-cart-wrapper .cart-container .cart-wrapper .cart-link {
@@ -101,14 +126,14 @@
   font-size: 1.5rem;
 }
 
-.nav-container .profile-cart-wrapper .cart-container .sell-register-wrapper {
-  margin-top: 0.8rem;
-  border: solid 2px #FFFFFF;
-  padding: 0 1rem;
+.nav-container .profile-cart-wrapper .cart-container .partner-register-wrapper {
+  margin: 0 0 0 2rem;
+  border: solid 2px #ffffff;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
-.nav-container .profile-cart-wrapper .cart-container .sell-register-wrapper p {
+.nav-container .profile-cart-wrapper .cart-container .partner-register-wrapper p {
   font-weight: 500;
 }
 /*# sourceMappingURL=Navbar.css.map */

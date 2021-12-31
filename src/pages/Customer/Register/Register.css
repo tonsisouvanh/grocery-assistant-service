@@ -1,0 +1,127 @@
+.container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #222222;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.container .invalid-mssg {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.container .form-container {
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  max-width: 70rem;
+  min-height: 80vh;
+  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.container .form-container .form-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f8f8fb;
+}
+
+.container .form-container .form-wrapper .logo-container {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+.container .form-container .form-wrapper .logo-container .logo-text .s-text {
+  font-size: 2.8rem;
+}
+
+.container .form-container .form-wrapper .logo-container .logo-text .apostrophe {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.container .form-container .form-wrapper .input-field {
+  margin-bottom: 1rem;
+}
+
+.container .form-container .form-wrapper .input-field .input {
+  width: 18rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 0.5rem 0;
+  color: #93989b;
+}
+
+.container .form-container .form-wrapper .input-field ::-webkit-input-placeholder {
+  color: #93989b;
+}
+
+.container .form-container .form-wrapper .input-field :-ms-input-placeholder {
+  color: #93989b;
+}
+
+.container .form-container .form-wrapper .input-field ::-ms-input-placeholder {
+  color: #93989b;
+}
+
+.container .form-container .form-wrapper .input-field ::placeholder {
+  color: #93989b;
+}
+
+.container .form-container .form-wrapper .btn-signup {
+  background-color: #e50914;
+  border: none;
+  color: #ffffff;
+  padding: 0.8rem 0;
+  width: 12rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+  cursor: pointer;
+}
+
+.container .form-container .form-wrapper .link {
+  text-decoration: underline;
+  margin-top: 1rem;
+}
+
+.container .form-container .form-wrapper .link p {
+  font-size: 0.8rem;
+  color: #0078d7;
+}
+
+.container .form-container .right-col-container .img-shopping {
+  width: 45rem;
+  height: 100%;
+}
+/*# sourceMappingURL=Register.css.map */

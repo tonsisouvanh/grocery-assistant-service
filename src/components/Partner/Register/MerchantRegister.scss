@@ -1,0 +1,97 @@
+@import "../../../Style/variable";
+
+.partner-merchant-container {
+  min-height: 100vh;
+  @include flexRow(center, center);
+  color: $black;
+  font-family: $vietnam;
+
+  .invalid-mssg {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+  }
+  .form-container {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 70rem;
+    min-height: 80vh;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+
+    .form-wrapper {
+      height: 100%;
+      @include flexCol(center, center);
+      background-color: #f8f8fb;
+
+      .logo-container {
+        font-family: $poppins;
+        font-weight: 800;
+        font-size: 2rem;
+        color: $red;
+        margin-bottom: 1rem;
+        .logo-text {
+          .s-text {
+            font-size: 2.8rem;
+          }
+          .apostrophe {
+            font-weight: 900;
+            font-size: 2.5rem;
+          }
+        }
+      }
+      .input-field {
+        margin-bottom: 1rem;
+        .input {
+          width: 18rem;
+          font-family: $vietnam;
+          font-size: 0.9rem;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          border-bottom: 1px solid $colorBorderBottom;
+          padding: 0.5rem 0;
+          color: $colorPlaceholder;
+        }
+        ::placeholder {
+          color: $colorPlaceholder;
+        }
+      }
+
+      .btn-signup {
+        background-color: $red;
+        border: none;
+        color: $white;
+        padding: 0.8rem 0;
+        width: 12rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        font-family: $vietnam;
+        cursor: pointer;
+      }
+
+      .link {
+        text-decoration: underline;
+        margin-top: 1rem;
+        p {
+          font-size: 0.8rem;
+          color: $blue;
+        }
+      }
+    }
+
+    .right-col-container {
+      @include flexCol(center, center);
+      padding: 4rem;
+      p {
+        font-size: 4rem;
+        font-family: $roboto;
+        color: $red;
+      }
+      .img-shopping {
+        width: 25rem;
+      }
+    }
+  }
+}

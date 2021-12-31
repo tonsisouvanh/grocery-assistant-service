@@ -19,7 +19,7 @@ const Category = () => {
           })}
         </ul>
         <div className="btn-container">
-          <Link to="/pages/login">
+          <Link to="/pages/products">
             <button className="btn-view-all">XEM TẤT CẢ</button>
           </Link>
         </div>

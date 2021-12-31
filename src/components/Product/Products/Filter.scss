@@ -1,0 +1,44 @@
+@import "../../style/variable";
+.sort {
+  background-color: #f2f2f2;
+  font-family: $roboto;
+  border: 1px solid #f2f2f2;
+  height: 4rem;
+  @include flexRow(space-between, center);
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  .sort-feature {
+    @include flexRow(center, center);
+    p {
+      span {
+        select {
+          outline: none;
+          height: 2.3rem;
+          border: 0.1px solid rgb(220, 220, 220);
+          margin-left: 0.5rem;
+          color: $gray-text;
+
+          option {
+            color: $gray-text;
+          }
+        }
+      }
+      margin-left: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 502px) {
+    padding: 0;
+    .sort-feature {
+      @include flexRow(center, center);
+      p {
+        span {
+          #Featured {
+            width: 6rem;
+            font-size: 0.8rem;
+          }
+        }
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}

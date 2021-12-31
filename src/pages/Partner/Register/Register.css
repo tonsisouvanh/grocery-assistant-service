@@ -1,0 +1,64 @@
+.partner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.partner-container .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 60rem;
+  -webkit-column-gap: 10rem;
+          column-gap: 10rem;
+}
+
+.partner-container .grid-container :hover {
+  opacity: 80%;
+}
+
+.partner-container .grid-container img {
+  width: 20rem;
+}
+
+.partner-container .grid-container .card {
+  background-color: #fc5151;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2rem;
+  padding: 2rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+          box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  cursor: pointer;
+}
+
+.partner-container .grid-container .card p {
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+/*# sourceMappingURL=Register.css.map */

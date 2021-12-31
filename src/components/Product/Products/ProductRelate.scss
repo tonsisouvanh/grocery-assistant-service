@@ -1,0 +1,98 @@
+@import "../../style/variable";
+
+.relate-product-container {
+  padding: 0 0 5rem 0;
+  text-align: center;
+  h2 {
+    font-family: sengbuhan;
+    font-size: 2rem;
+    color: #363741;
+    font-weight: bold;
+  }
+  .grid-container {
+    padding: 2rem 8rem 0.5rem 8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 240px));
+    justify-items: center;
+    justify-content: center;
+    gap: 2rem 0;
+    .card {
+      overflow: hidden;
+      font-family: sengbuhan;
+      img {
+        width: 13rem;
+        height: 16rem;
+      }
+      width: 100%;
+      h3 {
+        font-size: 1rem;
+      }
+      p {
+        span {
+          color: red;
+          margin-right: 0.5rem;
+          text-decoration: line-through;
+          font-weight: lighter;
+        }
+      }
+    }
+
+    @media screen and(max-width: 929px) {
+      padding: 2rem 0;
+    }
+  }
+
+  .paginationBtns {
+    @include flexRow(center, center);
+    width: 100%;
+    height: 4rem;
+    list-style: none;
+    a {
+      outline: none;
+      cursor: pointer;
+      margin: 0 1rem;
+      background-color: transparent;
+      border: 1px solid #6b85fc;
+      color: #7e817e;
+      width: 1.7rem;
+      height: 1.7rem;
+      display: block;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      &:hover {
+        color: $white;
+        background-color: #6b85fc;
+        font-weight: bold;
+      }
+    }
+    .link {
+      background-color: transparent;
+      color: #7e8196;
+      font-size: 1.2rem;
+      width: 4rem;
+      font-family: saysetthamai;
+      border: none;
+      &:hover {
+        color: #7e817e;
+        border: none;
+        background-color: transparent;
+        font-weight: bold;
+      }
+    }
+    @media screen and(max-width: 421px) {
+      a {
+        margin: 0 0.4rem;
+        width: 1.7rem;
+        height: auto;
+        padding: 0.3rem 0;
+        font-size: 0.8rem;
+        border-radius: 2px;
+      }
+      .link {
+        font-size: 0.8rem;
+        width: auto;
+        margin: 0 1rem;
+      }
+    }
+  }
+}

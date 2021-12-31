@@ -1,0 +1,196 @@
+.product-card {
+  width: 14rem;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-card .img-container {
+  position: relative;
+  width: 100%;
+  height: 13rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-card .img-container img {
+  width: 100%;
+}
+
+.product-card .img-container .card-hover {
+  position: absolute;
+  background-color: #d5d5d5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.product-card .img-container .detail-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.product-card .img-container .detail-btn button {
+  border-radius: 0.2rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: sengbuhan;
+  background-color: #2FCE98;
+  border: none;
+  width: 6rem;
+  height: 2.3rem;
+  cursor: pointer;
+}
+
+.product-card .img-container .card-hover {
+  display: none;
+}
+
+.product-card .img-container:hover .card-hover-active {
+  display: block;
+}
+
+.product-card .img-container:hover .detail-btn {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.product-card .content {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #4A4A4A;
+}
+
+.product-card .content .title-wrapper {
+  padding: 0.5rem;
+  border-bottom: 0.1px solid #cacaca;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.product-card .content .title-wrapper .link {
+  text-decoration: none;
+  color: #4A4A4A;
+  font-size: 0.8rem;
+}
+
+.product-card .content .title-wrapper .link:hover {
+  text-decoration: underline;
+}
+
+.product-card .content .title-wrapper h3 {
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: lighter;
+  font-family: sengbuhan;
+  line-height: 1.6rem;
+  margin-right: 1rem;
+}
+
+.product-card .content .title-wrapper .price-container .stars-wrapper {
+  margin: 0.8rem 0;
+  font-size: 0.7rem;
+}
+
+.product-card .content .title-wrapper .sale {
+  color: red;
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+
+.product-card .content .title-wrapper .price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2FCE98;
+}
+
+.product-card .content .interact-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-card .content .interact-btn #fas {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.8rem 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.product-card .content .interact-btn #fas span {
+  position: absolute;
+  font-size: 1rem;
+  color: #2FCE98;
+  right: 2.3rem;
+  top: 0.2rem;
+}
+
+.product-card .content .interact-btn #fas:hover {
+  background-color: #2FCE98;
+  color: #FFFFFF;
+}
+
+.product-card .content .interact-btn #fas:hover span i {
+  color: #FFFFFF;
+}
+
+.product-card .content .interact-btn .fa-heart {
+  border-right: 0.1px solid #cacaca;
+}
+/*# sourceMappingURL=ProductCard.css.map */

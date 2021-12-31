@@ -1,0 +1,121 @@
+.relate-product-container {
+  padding: 0 0 5rem 0;
+  text-align: center;
+}
+
+.relate-product-container h2 {
+  font-family: sengbuhan;
+  font-size: 2rem;
+  color: #363741;
+  font-weight: bold;
+}
+
+.relate-product-container .grid-container {
+  padding: 2rem 8rem 0.5rem 8rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 240px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 240px));
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem 0;
+}
+
+.relate-product-container .grid-container .card {
+  overflow: hidden;
+  font-family: sengbuhan;
+  width: 100%;
+}
+
+.relate-product-container .grid-container .card img {
+  width: 13rem;
+  height: 16rem;
+}
+
+.relate-product-container .grid-container .card h3 {
+  font-size: 1rem;
+}
+
+.relate-product-container .grid-container .card p span {
+  color: red;
+  margin-right: 0.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 929px) {
+  .relate-product-container .grid-container {
+    padding: 2rem 0;
+  }
+}
+
+.relate-product-container .paginationBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 4rem;
+  list-style: none;
+}
+
+.relate-product-container .paginationBtns a {
+  outline: none;
+  cursor: pointer;
+  margin: 0 1rem;
+  background-color: transparent;
+  border: 1px solid #6b85fc;
+  color: #7e817e;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: block;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.relate-product-container .paginationBtns a:hover {
+  color: #FFFFFF;
+  background-color: #6b85fc;
+  font-weight: bold;
+}
+
+.relate-product-container .paginationBtns .link {
+  background-color: transparent;
+  color: #7e8196;
+  font-size: 1.2rem;
+  width: 4rem;
+  font-family: saysetthamai;
+  border: none;
+}
+
+.relate-product-container .paginationBtns .link:hover {
+  color: #7e817e;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 421px) {
+  .relate-product-container .paginationBtns a {
+    margin: 0 0.4rem;
+    width: 1.7rem;
+    height: auto;
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
+    border-radius: 2px;
+  }
+  .relate-product-container .paginationBtns .link {
+    font-size: 0.8rem;
+    width: auto;
+    margin: 0 1rem;
+  }
+}
+/*# sourceMappingURL=ProductRelate.css.map */
