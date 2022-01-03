@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const { isLoggedIn } = useSelector((state) => state.auth);
   return (
     <>
       <div className="nav-container">
@@ -29,9 +30,15 @@ const Navbar = () => {
         <div className="profile-cart-wrapper">
           <div className="profile-container">
             <i class="far fa-user"></i>
-            <Link className="link" to="/pages/customer/login">
-              <p>Đăng ký/Đăng nhập</p>
-            </Link>
+            {isLoggedIn ? (
+              <Link className="link" to="/pages/customer/profile">
+                <p>Xem thông tin</p>
+              </Link>
+            ) : (
+              <Link className="link" to="/pages/customer/login">
+                <p>Đăng ký/Đăng nhập</p>
+              </Link>
+            )}
           </div>
 
           <div className="cart-container">

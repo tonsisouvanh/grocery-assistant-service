@@ -4,6 +4,8 @@ import "./Home.css";
 import Banner from "../../components/Banner/Banner";
 import Category from "../../components/Category/Category";
 import UserService from "../../services/user.service";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const [accounts, setAccounts] = useState([]);
@@ -27,8 +29,10 @@ const Home = () => {
 
   return (
     <>
+      <Navbar />
       <Category></Category>
       <Banner></Banner>
+      <Footer />
     </>
   );
 };

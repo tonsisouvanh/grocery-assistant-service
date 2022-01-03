@@ -8,8 +8,8 @@ const getPublicContent = () => {
   return axios.get(API_URL + "accounts");
 };
 
-const getUserBoard = () => {
-  return axios.get(API_URL + "user", { headers: authHeader() });
+const getUserBoard = (username, acctType) => {
+  return axios.get(API_URL + `KhachHangs/profile?username=${username}&acctType=${acctType}`, { headers: authHeader() });
 };
 
 const getModeratorBoard = () => {

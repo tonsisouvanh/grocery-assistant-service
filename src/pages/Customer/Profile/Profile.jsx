@@ -1,38 +1,50 @@
-// import React from "react";
-// import { Redirect } from 'react-router-dom';
-// import { useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../../action/auth";
+import UserService from "../../../services/user.service";
+const Profile = () => {
+  const { user: currentUser } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigator = useNavigate();
+  const [customer, setCustomer] = useState({});
 
-// const Profile = () => {
-//   const { user: currentUser } = useSelector((state) => state.auth);
+  const handleLogout = () => {
+    dispatch(logout());
+    navigator("/");
+  };
+  useEffect(() => {
+    UserService.getUserBoard(currentUser.username, currentUser.acctType).then(
+      (response) => {
+        setCustomer(response.data);
+      },
+      (error) => {
+        const _content =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
 
-//   if (!currentUser) {
-//     return <Redirect to="/login" />;
-//   }
+        setCustomer(_content);
+      }
+    );
+  }, []);
 
-//   return (
-//     <div className="container">
-//       <header className="jumbotron">
-//         <h3>
-//           <strong>{currentUser.username}</strong> Profile
-//         </h3>
-//       </header>
-//       {/* <p>
-//         <strong>Token:</strong> {currentUser.accessToken.substring(0, 20)} ...{" "}
-//         {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}
-//       </p>
-//       <p>
-//         <strong>Id:</strong> {currentUser.id}
-//       </p>
-//       <p>
-//         <strong>Email:</strong> {currentUser.email}
-//       </p>
-//       <strong>Authorities:</strong> */}
-//       <ul>
-//         {currentUser.roles &&
-//           currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-//       </ul>
-//     </div>
-//   );
-// };
+  return (
+    <>
+      <div>
+        <h1>{customer.email}</h1>
+        <h1>{customer.tenkh}</h1>
+        <h1>{customer.sdt}</h1>
+        <h1>{customer.diachi}</h1>
+        <button onClick={handleLogout}>logout</button>
+        <Link to="/">
+          <button>Trang chủ</button>
+        </Link>
+      </div>
+    </>
+  );
+};
 
-// export default Profile;
+export default Profile;

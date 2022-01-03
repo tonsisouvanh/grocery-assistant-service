@@ -26,10 +26,10 @@ const Login = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [accountType, setAccountType] = useState(4);
+  const [accountType, setAccountType] = useState(0);
 
   const [loading, setLoading] = useState(false);
-  const { isLoggedIn } = useSelector((state) => state.auth);
+  // const { isLoggedIn } = useSelector((state) => state.auth);
   const { message } = useSelector((state) => state.message);
   const dispatch = useDispatch();
   const naviagte = useNavigate();
@@ -68,10 +68,6 @@ const Login = () => {
     setAccountType(e.target.value);
   };
 
-  // if (isLoggedIn) {
-  //   return <Route path="/" element={<Navigate to="/" />} />;
-  // }
-  console.log(accountType);
   return (
     <div className="login-container">
       <Form onSubmit={handleLogin} ref={form}>
@@ -90,11 +86,13 @@ const Login = () => {
                   id=""
                   onChange={handleAccountType}
                 >
-                  <option value={0}> </option>
+                  <option value={0}></option>
+                  <option value={1}>Admin</option>
                   <option value={4}>Normal customer</option>
                   <option value={2}>Merchant</option>
                   <option value={3}>Shipper</option>
                 </select>
+
               </div>
               <div className="input-field">
                 <label htmlFor="username">Username</label>

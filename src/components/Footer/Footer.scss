@@ -52,7 +52,7 @@
         line-height: 2rem;
       }
       .contact-row {
-        @include flexRow(start, center);
+        @include flexRow(flex-start, center);
         margin-bottom: 2rem;
         .fas {
           margin-right: 0.5rem;
@@ -68,7 +68,7 @@
   }
   .copyright {
     background-color: #3e4450;
-    @include flexRow(start, center);
+    @include flexRow(flex-start, center);
     border-top: 1px solid #4f5563;
     color: $white;
     font-size: 1rem;
@@ -117,7 +117,7 @@
 //           font-size: 14px;
 //         }
 //         .contact-row {
-//           @include flexRow(start, center);
+//           @include flexRow(flex-start, center);
 //           margin-bottom: 2rem;
 //           .fas {
 //             margin-right: 0.5rem;
@@ -132,7 +132,7 @@
 //     }
 //     .copyright {
 //       background-color: #3e4450;
-//       @include flexRow(start, center);
+//       @include flexRow(flex-start, center);
 //       border-top: 1px solid #4f5563;
 //       color: $white;
 //       font-size: 1rem;

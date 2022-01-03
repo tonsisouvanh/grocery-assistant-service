@@ -80,7 +80,7 @@
           }
         }
         .checkbox-wrapper {
-          @include flexCol(start, start);
+          @include flexCol(flex-start, flex-start);
           .container {
             padding: 0;
             color: gray;
@@ -109,7 +109,7 @@
       }
       .color {
         .colors {
-          @include flexRow(start, center);
+          @include flexRow(flex-start, center);
           .fas {
             font-size: 2rem;
             border: none;
@@ -133,7 +133,7 @@
 
       .size {
         .sizes {
-          @include flexRow(start, center);
+          @include flexRow(flex-start, center);
           p {
             border: 2px solid rgb(211, 211, 211);
             width: 2rem;

@@ -72,7 +72,6 @@ const Register = ({ userType, img }) => {
   const handleRegister = (e) => {
     e.preventDefault();
     setSuccessful(false);
-    // form.current.validateAll();
     if (checkBtn.current.context._errors.length === 0) {
       dispatch(
         registerShipper(

@@ -4,34 +4,36 @@ import axios from "axios";
 const API_URL = "https://localhost:44370/api/";
 
 const registerMerchant = (
+  storeName,
+  storeAddress,
+  storePhone,
   fullname,
-  address,
+  email,
   phone,
-  cmnd,
-  plateNumber,
-  vaccine,
-  registerDate,
-  longitude,
-  location,
+  address,
+  department,
+  accountType,
   username,
-  password,
-  accountType
+  password
 ) => {
-  return axios.post(API_URL + "NhanvienChes/register", {
-    tenkh: fullname,
-    diachi: address,
-    sdt: phone,
-    cmnd: cmnd,
-    bsxe: plateNumber,
-    ttvaccine: vaccine,
-    ngaydk: registerDate,
-    vtkinhdo: longitude,
-    vtvitri: location,
-    accounts: [
+  return axios.post(API_URL + "cuahangs/register", {
+    tench: storeName,
+    diachi: storeAddress,
+    sdt: storePhone,
+    nhanviench: [
       {
-        username: username,
-        password: password,
-        LoaiAct: accountType,
+        tennv: fullname,
+        email: email,
+        sdt: phone,
+        diachi: address,
+        bophan: department,
+        accounts: [
+          {
+            username: username,
+            password: password,
+            LoaiAct: accountType,
+          },
+        ],
       },
     ],
   });
@@ -103,10 +105,9 @@ const login = (username, password, accountType) => {
       LoaiAct: accountType,
     })
     .then((response) => {
-      if (response.data.accessToken) {
+      if (response.data) {
         localStorage.setItem("user", JSON.stringify(response.data));
       }
-
       return response.data;
     });
 };

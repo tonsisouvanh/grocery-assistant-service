@@ -1,4 +1,4 @@
-@import "../../style/variable";
+@import "../.././../Style/variable";
 
 .product-detail-container {
   height: 50em;
@@ -14,10 +14,10 @@
     .col {
     }
     .img-col {
-      @include flexRow(center, start);
+      @include flexRow(center, flex-start);
 
       .mini-img-wrapper {
-        @include flexCol(start, center);
+        @include flexCol(flex-start, center);
         width: 6rem;
         height: 37.4rem;
         overflow: hidden;
@@ -87,12 +87,12 @@
           margin-bottom: 1rem;
         }
         .size-wrapper {
-          @include flexRow(start, center);
+          @include flexRow(flex-start, center);
           p {
             margin-right: 0.7rem;
             width: 2.2rem;
             text-align: center;
-            border: 2px solid $green;
+            border: 2px solid green;
             border-radius: 50%;
             padding: 0.3rem 0;
             font-family: Roboto;
@@ -181,7 +181,7 @@
             font-size: 14px;
           }
           .size-wrapper {
-            @include flexRow(start, center);
+            @include flexRow(flex-start, center);
             p {
               margin-right: 0.7rem;
               width: 1.7rem;
@@ -232,7 +232,7 @@
             font-size: 14px;
           }
           .size-wrapper {
-            @include flexRow(start, center);
+            @include flexRow(flex-start, center);
             p {
               margin-right: 0.7rem;
               width: 1.7rem;
@@ -269,7 +269,7 @@
             font-size: 14px;
           }
           .size-wrapper {
-            @include flexRow(start, center);
+            @include flexRow(flex-start, center);
             p {
               margin-right: 0.7rem;
               width: 1.7rem;

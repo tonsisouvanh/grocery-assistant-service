@@ -1,226 +1,3 @@
-// import React, { useState, useRef } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { register } from "../../../action/auth";
-// import "./MerchantRegister.css";
-
-// import Form from "react-validation/build/form";
-// import Input from "react-validation/build/input";
-// import CheckButton from "react-validation/build/button";
-// import validator from "validator";
-
-// const required = (value) => {
-//   if (!value) {
-//     return <div className="invalid-mssg">Yêu cầu nhập thông tin!</div>;
-//   }
-// };
-
-// const validEmail = (value) => {
-//   if (!validator.isEmail(value)) {
-//     return <div className="invalid-mssg">Địa chỉ email không hợp lệ</div>;
-//   }
-// };
-
-// const vusername = (value) => {
-//   if (value.length < 3 || value.length > 20) {
-//     return (
-//       <div className="invalid-mssg">
-//         Tên đăng nhập phải có từ 3 ký tự và không được quá 20
-//       </div>
-//     );
-//   }
-// };
-
-// const vpassword = (value) => {
-//   if (value.length !== 8) {
-//     return <div className="invalid-mssg">Mật khẩu phải có 8 ký tự</div>;
-//   }
-// };
-
-// const vphoneNumber = (value) => {
-//   if (!validator.isMobilePhone(value)) {
-//     return <div className="invalid-mssg">SĐT không hợp lệ</div>;
-//   }
-// };
-
-// const Register = ({ img }) => {
-//   const form = useRef();
-//   const checkBtn = useRef();
-
-//   const location = useLocation();
-//   const navigate = useNavigate();
-//   const [MerchantState, setMerchantState] = useState({
-//     storeName: "",
-//     storeAddress: "",
-//     storePhone: "",
-//     fullname: "",
-//     email: "",
-//     phone: "",
-//     address: "",
-//     department: "",
-
-//     accountType: 4,
-//     username: "",
-//     password: "",
-//   });
-
-//   const [successful, setSuccessful] = useState(false);
-//   const { message } = useSelector((state) => state.message);
-//   const dispatch = useDispatch();
-
-//   const onChanges = (e) => {
-//     setMerchantState({
-//       ...MerchantState,
-//       [e.target.name]: e.target.value,
-//     });
-//   };
-
-//   const handleRegister = (e) => {
-//     e.preventDefault();
-//     setSuccessful(false);
-//     // form.current.validateAll();
-//     if (checkBtn.current.context._errors.length === 0) {
-//       dispatch(
-//         register(
-//           MerchantState.fullname,
-//           MerchantState.address,
-//           MerchantState.phone,
-//           MerchantState.email,
-//           MerchantState.username,
-//           MerchantState.password,
-//           MerchantState.accountType
-//         )
-//       )
-//         .then(() => {
-//           setSuccessful(true);
-//           alert("Đăng ký thành công");
-//           navigate("/");
-//         })
-//         .catch(() => {
-//           setSuccessful(false);
-//         });
-//     }
-//   };
-
-//   return (
-//     <>
-//       <div className="partner-merchant-container">
-//         <div className="form-container">
-//           <Form onSubmit={handleRegister}>
-//             {!successful && (
-//               <div className="form-wrapper">
-//                 <div className="logo-container">
-//                   <p className="logo-text">
-//                     <span className="s-text">S</span>hopin
-//                     <span className="apostrophe">:)</span>
-//                   </p>
-//                 </div>
-//                 <div className="input-field">
-//                   <Input
-//                     className="input"
-//                     type="text"
-//                     name="fullname"
-//                     value={MerchantState.fullname}
-//                     onChange={onChanges}
-//                     validations={[required]}
-//                     placeholder="Họ và tên"
-//                   />
-//                 </div>
-
-//                 <div className="input-field">
-//                   <Input
-//                     className="input"
-//                     type="text"
-//                     name="address"
-//                     value={MerchantState.address}
-//                     onChange={onChanges}
-//                     validations={[required]}
-//                     placeholder="Địa chỉ"
-//                   />
-//                 </div>
-
-//                 <div className="input-field">
-//                   <Input
-//                     className="input"
-//                     type="text"
-//                     name="phone"
-//                     value={MerchantState.phone}
-//                     onChange={onChanges}
-//                     validations={([required], [vphoneNumber])}
-//                     placeholder="SĐT"
-//                   />
-//                 </div>
-
-//                 <div className="input-field">
-//                   <Input
-//                     className="input"
-//                     type="text"
-//                     name="email"
-//                     value={MerchantState.email}
-//                     onChange={onChanges}
-//                     validations={[required, validEmail]}
-//                     placeholder="Địa chỉ email"
-//                   />
-//                 </div>
-//                 <div className="input-field">
-//                   <Input
-//                     className="input"
-//                     type="text"
-//                     name="username"
-//                     value={MerchantState.username}
-//                     onChange={onChanges}
-//                     validations={[required, vusername]}
-//                     placeholder="Tên đăng nhập"
-//                   />
-//                 </div>
-//                 <div className="input-field">
-//                   <Input
-//                     className="input"
-//                     type="password"
-//                     name="password"
-//                     value={MerchantState.password}
-//                     onChange={onChanges}
-//                     validations={[required, vpassword]}
-//                     placeholder="Mật khẩu"
-//                   />
-//                 </div>
-
-//                 <div>
-//                   <button className="btn-signup">Đăng ký</button>
-//                 </div>
-
-//                 <Link className="link" to="/">
-//                   <p>Trang chủ</p>
-//                 </Link>
-//               </div>
-//             )}
-
-//             {message && (
-//               <div className="form-group">
-//                 <div
-//                   className={
-//                     successful ? "alert alert-success" : "alert alert-danger"
-//                   }
-//                   role="alert"
-//                 >
-//                   <p>Thông tin tin tải khoản đã tồn tại trong hệ thống!</p>
-//                 </div>
-//               </div>
-//             )}
-//             <CheckButton style={{ display: "none" }} ref={checkBtn} />
-//           </Form>
-//           <div className="right-col-container">
-//             <p>Merchant</p>
-//             <img className={"img-shopping"} src={img} alt="" />
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Register;
-
 import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -234,6 +11,11 @@ import validator from "validator";
 
 const required = (value) => {
   if (!value) {
+    return <div className="invalid-mssg">Yêu cầu nhập thông tin!</div>;
+  }
+};
+const vemail = (value) => {
+  if (!validator.isEmail(value)) {
     return <div className="invalid-mssg">Yêu cầu nhập thông tin!</div>;
   }
 };
@@ -294,7 +76,6 @@ const Register = ({ userType, img }) => {
   const handleRegister = (e) => {
     e.preventDefault();
     setSuccessful(false);
-    // form.current.validateAll();
     if (checkBtn.current.context._errors.length === 0) {
       dispatch(
         registerMerchant(
@@ -322,6 +103,79 @@ const Register = ({ userType, img }) => {
     }
   };
 
+  const merchantInput = [
+    {
+      inp_Name: "storeName",
+      inp_Type: "text",
+      inp_Value: MerchantState.storeName,
+      inp_Validations: [required],
+      inp_PlaceHolder: "Tên cửa hàng",
+    },
+    {
+      inp_Name: "storeAddress",
+      inp_Type: "text",
+      inp_Value: MerchantState.storeAddress,
+      inp_Validations: [required],
+      inp_PlaceHolder: "Địa chỉ cừa hàng",
+    },
+    {
+      inp_Name: "storePhone",
+      inp_Type: "text",
+      inp_Value: MerchantState.storePhone,
+      inp_Validations: ([required], [vphoneNumber]),
+      inp_PlaceHolder: "SĐT Cửa hàng",
+    },
+    {
+      inp_Name: "fullname",
+      inp_Type: "text",
+      inp_Value: MerchantState.fullname,
+      inp_Validations: [required],
+      inp_PlaceHolder: "Họ và tên",
+    },
+    {
+      inp_Name: "email",
+      inp_Type: "text",
+      inp_Value: MerchantState.email,
+      inp_Validations: ([required], [vemail]),
+      inp_PlaceHolder: "Địa chỉ email",
+    },
+    {
+      inp_Name: "phone",
+      inp_Type: "text",
+      inp_Value: MerchantState.phone,
+      inp_Validations: ([required], [vphoneNumber]),
+      inp_PlaceHolder: "Số điện thoại",
+    },
+    {
+      inp_Name: "address",
+      inp_Type: "text",
+      inp_Value: MerchantState.address,
+      inp_Validations: [required],
+      inp_PlaceHolder: "Địa chỉ",
+    },
+    {
+      inp_Name: "department",
+      inp_Type: "text",
+      inp_Value: MerchantState.department,
+      inp_Validations: [required],
+      inp_PlaceHolder: "Bộ phận",
+    },
+    {
+      inp_Name: "username",
+      inp_Type: "text",
+      inp_Value: MerchantState.username,
+      inp_Validations: ([required], [vusername]),
+      inp_PlaceHolder: "Tên đăng nhập",
+    },
+    {
+      inp_Name: "password",
+      inp_Type: "text",
+      inp_Value: MerchantState.password,
+      inp_Validations: ([required], [vpassword]),
+      inp_PlaceHolder: "Mật khẩu",
+    },
+  ];
+
   return (
     <>
       <div className="partner-merchant-container">
@@ -335,98 +189,21 @@ const Register = ({ userType, img }) => {
                     <span className="apostrophe">:)</span>
                   </p>
                 </div>
-                <div className="input-field">
-                  <Input
-                    className="input"
-                    type="text"
-                    name="fullname"
-                    value={MerchantState.fullname}
-                    onChange={onChanges}
-                    validations={[required]}
-                    placeholder="Họ và tên"
-                  />
-                </div>
-
-                <div className="input-field">
-                  <Input
-                    className="input"
-                    type="text"
-                    name="address"
-                    value={MerchantState.address}
-                    onChange={onChanges}
-                    validations={[required]}
-                    placeholder="Địa chỉ"
-                  />
-                </div>
-
-                <div className="input-field">
-                  <Input
-                    className="input"
-                    type="text"
-                    name="phone"
-                    value={MerchantState.phone}
-                    onChange={onChanges}
-                    validations={([required], [vphoneNumber])}
-                    placeholder="SĐT"
-                  />
-                </div>
-
-                <div className="input-field">
-                  <Input
-                    className="input"
-                    type="text"
-                    name="cmnd"
-                    value={MerchantState.cmnd}
-                    onChange={onChanges}
-                    validations={[required]}
-                    placeholder="CMND/CCCD"
-                  />
-                </div>
-                <div className="input-field">
-                  <Input
-                    className="input"
-                    type="text"
-                    name="plate"
-                    value={MerchantState.plate}
-                    onChange={onChanges}
-                    validations={[required]}
-                    placeholder="Biến số xe"
-                  />
-                </div>
-                <div className="input-field">
-                  <Input
-                    className="input"
-                    type="text"
-                    name="vaccine"
-                    value={MerchantState.vaccine}
-                    onChange={onChanges}
-                    validations={[required]}
-                    placeholder="Mũi tiêm Vaccine"
-                  />
-                </div>
-
-                <div className="input-field">
-                  <Input
-                    className="input"
-                    type="text"
-                    name="username"
-                    value={MerchantState.username}
-                    onChange={onChanges}
-                    validations={[required, vusername]}
-                    placeholder="Tên đăng nhập"
-                  />
-                </div>
-                <div className="input-field">
-                  <Input
-                    className="input"
-                    type="password"
-                    name="password"
-                    value={MerchantState.password}
-                    onChange={onChanges}
-                    validations={[required, vpassword]}
-                    placeholder="Mật khẩu"
-                  />
-                </div>
+                {merchantInput.map((input, index) => {
+                  return (
+                    <div className="input-field" key={index}>
+                      <Input
+                        className="input"
+                        type={input.inp_Type}
+                        name={input.inp_Name}
+                        value={input.inp_Value}
+                        onChange={onChanges}
+                        validations={input.inp_Validations}
+                        placeholder={input.inp_PlaceHolder}
+                      />
+                    </div>
+                  );
+                })}
 
                 <div>
                   <button className="btn-signup">Đăng ký</button>
@@ -452,6 +229,7 @@ const Register = ({ userType, img }) => {
             )}
             <CheckButton style={{ display: "none" }} ref={checkBtn} />
           </Form>
+
           <div className="right-col-container">
             <p>Merchant</p>
             <img className="img-shopping" src={img} alt="" />
