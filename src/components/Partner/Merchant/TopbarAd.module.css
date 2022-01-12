@@ -1,0 +1,57 @@
+
+.container{
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    overflow: hidden;
+    height: 10vh;
+}
+
+.container p{
+    margin: 0;
+}
+
+.logo_wrapper{
+    border: none;
+    height: 100%;
+    width: 290px;
+    background-color: #182444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo{
+    width: 50px;
+    height: auto;
+}
+
+.avatar{
+    width: 47px;
+}
+
+#fa-envelope, #fa-bell, #fa-sign-out-alt{
+    font-size: 25px;
+}
+#fa-envelope, #fa-bell{
+    color: #486DCF;
+}
+#fa-sign-out-alt{
+    color: rgb(177, 20, 20);
+}
+
+#fa-envelope, #fa-bell, #fa-sign-out-alt, #name, .avatar{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+.profile_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

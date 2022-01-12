@@ -1,0 +1,93 @@
+@import "../../../Style/variable";
+
+.profile-containers {
+  max-width: 100%;
+  min-height: 100vh;
+  @include flexRow(center, center);
+  font-family: $vietnam;
+  background-color: #f9f9f9;
+  .link{
+    text-decoration: none;
+  }
+  .profile-content-wrapper {
+    .text-header-container {
+      .text-header {
+        font-size: 2.5rem;
+        margin: 2rem 0;
+      }
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 20rem 50rem;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      .left-col-container {
+        padding: 3rem;
+        border-right: 0.1px solid #e4e4e4;
+        @include flexCol(flex-start, center);
+        position: relative;
+        height: 70vh;
+        .avatar-container {
+          @include flexCol(center, center);
+          margin-bottom: 1rem;
+          .avatar {
+            width: 8rem;
+          }
+
+          .user-name {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+          }
+        }
+
+        .menu-container {
+          width: 100%;
+          list-style: none;
+          color: #333333;
+          .active {
+            background-color: $red;
+            color: $white;
+            font-weight: bold;
+          }
+          .li {
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            margin: 0 0 0.5rem 0;
+          }
+        }
+
+
+        .btn-container{
+          min-width: 18rem;
+          position: absolute;
+          bottom: 1rem;
+          left: 1rem;
+        }
+      }
+
+      .right-col-container {
+        padding: 2.5rem;
+        .form-text-header-container {
+          .form-text-header {
+            font-size: 1.75rem;
+            margin-bottom: 1.75rem;
+          }
+        }
+
+        .user-profile-form-container {
+          @include flexCol(center, center);
+
+          .user-form-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+          }
+          .button-container {
+            width: 100%;
+            margin: 2rem 0 0 0;
+            @include flexRow(center, center);
+          }
+        }
+      }
+    }
+  }
+}

@@ -28,7 +28,7 @@ function Banner() {
                 className={curr === index ? "slider slider-active" : "slider"}
               >
                 {index === curr && (
-                  <img src={curr === index ? item.url : ""} alt="" />
+                  <img src={curr === index ? item.url : ""} alt="Not available" />
                 )}
               </div>
             );

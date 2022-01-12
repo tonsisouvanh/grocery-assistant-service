@@ -1,6 +1,6 @@
 // export default ProductList
 import React, { useState, useContext, useEffect } from "react";
-import ProductCard from "./ProductCard";
+import ProductCard from "./ProCard";
 import "./ProductList.css";
 import { Link, useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
@@ -63,7 +63,7 @@ function ProductList({ products, addProduct }) {
   //   }
   //   return 0;
   // };
-  
+
   // const showAll =
   //   products &&
   //   products
@@ -130,32 +130,21 @@ function ProductList({ products, addProduct }) {
             <div className="box category">
               <h3 className="category-title">Danh mục</h3>
               <ul className="cate-list">
-                <Link to="#" className="cate-link">
-                  <li>
-                    Bán chạy<span>+</span>
-                  </li>
-                </Link>
-                <Link to="#" className="cate-link">
-                  <li>
-                    Giảm giá<span>+</span>
-                  </li>
-                </Link>
-                <Link to="#" className="cate-link">
-                  <li>
-                    Hàng mua có đồ tặng<span>+</span>
-                  </li>
-                </Link>
+                <li>Bán chạy</li>
+                <li>Giảm giá</li>
+                <li>Hàng mua có đồ tặng</li>
               </ul>
             </div>
           </div>
-          {/* <div className="cards-container">
-            <Filter
-              handleFilter={handleFilter}
-              filter={filter}
-              setFilter={setFilter}
-            />
-            <div className="items">{type !== "all" ? showType : showAll}</div>
-            <ReactPaginate
+          <div className="cards-container">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            {/* <ReactPaginate
               previousLabel={"Về"}
               nextLabel={"Tiếp"}
               pageCount={pageCount}
@@ -165,8 +154,8 @@ function ProductList({ products, addProduct }) {
               nextLinkClassName={"link nextBtn"}
               disabledClassNam={"paginationDisabled"}
               activeClassName={"paginationActive"}
-            />
-          </div> */}
+            /> */}
+          </div>
         </div>
       </div>
     </>

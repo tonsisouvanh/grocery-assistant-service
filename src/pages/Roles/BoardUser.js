@@ -6,7 +6,7 @@ const BoardUser = () => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    UserService.getUserBoard().then(
+    UserService.getCustomerBoard().then(
       (response) => {
         setContent(response.data);
       },

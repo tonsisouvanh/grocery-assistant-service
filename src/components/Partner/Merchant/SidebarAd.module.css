@@ -1,0 +1,45 @@
+.container {
+  background-color: #0f1a34;
+  width: 290px;
+  min-height: 90vh;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.menu_links_wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  margin: 40px 0 0 30px;
+}
+
+.menu_links_wrapper .link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  transition: all 0.2s ease-in;
+}
+
+.menu_links_wrapper .link:hover {
+  font-weight: bold;
+  opacity: 50%;
+}
+
+.link span {
+  margin-right: 10px;
+}
+
+#menu_link_active {
+  background: #c6426e;
+  border-radius: 5px;
+  height: 45px;
+  width: 220px;
+  padding: 0 10px;
+}
+
+#icon {
+  font-size: 25px;
+}

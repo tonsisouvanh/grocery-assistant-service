@@ -1,0 +1,152 @@
+.profile-containers {
+  max-width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.profile-containers .link {
+  text-decoration: none;
+}
+
+.profile-containers .profile-content-wrapper .text-header-container .text-header {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.profile-containers .profile-content-wrapper .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20rem 50rem;
+      grid-template-columns: 20rem 50rem;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .left-col-container {
+  padding: 3rem;
+  border-right: 0.1px solid #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 70vh;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .left-col-container .avatar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .left-col-container .avatar-container .avatar {
+  width: 8rem;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .left-col-container .avatar-container .user-name {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .left-col-container .menu-container {
+  width: 100%;
+  list-style: none;
+  color: #333333;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .left-col-container .menu-container .active {
+  background-color: #e50914;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .left-col-container .menu-container .li {
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .left-col-container .btn-container {
+  min-width: 18rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .right-col-container {
+  padding: 2.5rem;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .right-col-container .form-text-header-container .form-text-header {
+  font-size: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .right-col-container .user-profile-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .right-col-container .user-profile-form-container .user-form-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.profile-containers .profile-content-wrapper .grid-container .right-col-container .user-profile-form-container .button-container {
+  width: 100%;
+  margin: 2rem 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=Profile.css.map */

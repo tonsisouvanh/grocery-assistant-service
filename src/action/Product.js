@@ -1,63 +1,180 @@
-import api from "./api";
+import { FETCH_ALL, SET_MESSAGE } from "./types";
 
-export const ACTION_TYPES = {
-    CREATE: 'CREATE',
-    UPDATE: 'UPDATE',
-    DELETE: 'DELETE',
-    FETCH_ALL: 'FETCH_ALL'
-}
+import ProductService from "../services/product.service";
 
-const formateData = data => ({
-    ...data,
-    age: parseInt(data.age ? data.age : 0)
-})
+export const getAllProducts = () => (dispatch) => {
+  return ProductService.getAllProducts().then(
+    (response) => {
+      dispatch({
+        type: FETCH_ALL,
+        payload: response.data,
+      });
 
-export const fetchAll = () => dispatch => {
-    api.Product().fetchAll()
-        .then(response => {
-            console.log(response)
-            dispatch({
-                type: ACTION_TYPES.FETCH_ALL,
-                payload: response.data
-            })
-        })
-        .catch(err => console.log(err))
-}
+      return Promise.resolve();
+    },
+    (error) => {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
 
-export const create = (data, onSuccess) => dispatch => {
-    data = formateData(data)
-    api.Product().create(data)
-        .then(res => {
-            dispatch({
-                type: ACTION_TYPES.CREATE,
-                payload: res.data
-            })
-            onSuccess()
-        })
-        .catch(err => console.log(err))
-}
+      dispatch({
+        type: SET_MESSAGE,
+        payload: message,
+      });
 
-export const update = (id, data, onSuccess) => dispatch => {
-    data = formateData(data)
-    api.Product().update(id, data)
-        .then(res => {
-            dispatch({
-                type: ACTION_TYPES.UPDATE,
-                payload: { id, ...data }
-            })
-            onSuccess()
-        })
-        .catch(err => console.log(err))
-}
+      return Promise.reject();
+    }
+  );
+};
+//   export const registerShipper =
+//     (
+//       fullname,
+//       address,
+//       phone,
+//       cmnd,
+//       plateNumber,
+//       vaccine,
+//       registerDate,
+//       longitude,
+//       location,
+//       username,
+//       password,
+//       accountType
+//     ) =>
+//     (dispatch) => {
+//       return AuthService.registerShipper(
+//         fullname,
+//         address,
+//         phone,
+//         cmnd,
+//         plateNumber,
+//         vaccine,
+//         registerDate,
+//         longitude,
+//         location,
+//         username,
+//         password,
+//         accountType
+//       ).then(
+//         (response) => {
+//           dispatch({
+//             type: REGISTER_SUCCESS,
+//           });
 
-export const Delete = (id, onSuccess) => dispatch => {
-    api.Product().delete(id)
-        .then(res => {
-            dispatch({
-                type: ACTION_TYPES.DELETE,
-                payload: id
-            })
-            onSuccess()
-        })
-        .catch(err => console.log(err))
-}
+//           dispatch({
+//             type: SET_MESSAGE,
+//             payload: response.data.message,
+//           });
+
+//           return Promise.resolve();
+//         },
+//         (error) => {
+//           const message =
+//             (error.response &&
+//               error.response.data &&
+//               error.response.data.message) ||
+//             error.message ||
+//             error.toString();
+
+//           dispatch({
+//             type: REGISTER_FAIL,
+//           });
+
+//           dispatch({
+//             type: SET_MESSAGE,
+//             payload: message,
+//           });
+
+//           return Promise.reject();
+//         }
+//       );
+//     };
+
+//   export const register =
+//     (fullname, address, phone, email, username, password, accountType) =>
+//     (dispatch) => {
+//       return AuthService.register(
+//         fullname,
+//         address,
+//         phone,
+//         email,
+//         username,
+//         password,
+//         accountType
+//       ).then(
+//         (response) => {
+//           dispatch({
+//             type: REGISTER_SUCCESS,
+//           });
+
+//           dispatch({
+//             type: SET_MESSAGE,
+//             payload: response.data.message,
+//           });
+
+//           return Promise.resolve();
+//         },
+//         (error) => {
+//           const message =
+//             (error.response &&
+//               error.response.data &&
+//               error.response.data.message) ||
+//             error.message ||
+//             error.toString();
+
+//           dispatch({
+//             type: REGISTER_FAIL,
+//           });
+
+//           dispatch({
+//             type: SET_MESSAGE,
+//             payload: message,
+//           });
+
+//           return Promise.reject();
+//         }
+//       );
+//     };
+
+//   export const login = (username, password, accountType) => (dispatch) => {
+//     return AuthService.login(username, password, accountType).then(
+//       (data) => {
+//         dispatch({
+//           type: LOGIN_SUCCESS,
+//           payload: { user: data },
+//         });
+
+//         return Promise.resolve();
+//       },
+//       (error) => {
+//         const message =
+//           (error.response &&
+//             error.response.data &&
+//             error.response.data.message) ||
+//           error.message ||
+//           error.toString();
+
+//         dispatch({
+//           type: LOGIN_FAIL,
+//         });
+
+//         dispatch({
+//           type: SET_MESSAGE,
+//           payload: message,
+//         });
+
+//         return Promise.reject();
+//       }
+//     );
+//   };
+
+//   export const logout = () => (dispatch) => {
+//     AuthService.logout();
+
+//     dispatch({
+//       type: LOGOUT,
+//     });
+//   };

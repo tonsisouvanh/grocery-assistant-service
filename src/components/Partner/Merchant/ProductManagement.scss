@@ -1,0 +1,12 @@
+@import '../../../Style/variable';
+.merchant-product-containers{
+    min-width: 80%;
+    .text-header-container{
+        min-width: 100%;
+        .text-header{
+            font-size: 2rem;
+            font-family: $vietnam;
+            padding: 1rem 0 0 2rem;
+        }
+    }
+}

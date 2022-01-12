@@ -1,0 +1,14 @@
+.merchant-product-containers {
+  min-width: 80%;
+}
+
+.merchant-product-containers .text-header-container {
+  min-width: 100%;
+}
+
+.merchant-product-containers .text-header-container .text-header {
+  font-size: 2rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+  padding: 1rem 0 0 2rem;
+}
+/*# sourceMappingURL=ProductManagement.css.map */

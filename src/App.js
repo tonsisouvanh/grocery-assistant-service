@@ -16,12 +16,16 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Category from "./components/Category/Category";
 import Banner from "./components/Banner/Banner";
-
 import CustomerLogin from "./pages/Customer/Login/Login";
 import CustomerRegister from "./pages/Customer/Register/Register";
 import CustomerProfile from "./pages/Customer/Profile/Profile";
 
+// PARTNER
 import PartnerRegister from "./pages/Partner/Register/Register";
+// MERCHANT
+import MerchantProductManagement from "./pages/Partner/Merchant/Dashboard/ProductManagement";
+import MerchantAddProductManagement from "./pages/Partner/Merchant/Dashboard/AddProductPage";
+
 import Products from "./pages/Product/Products";
 
 function App() {
@@ -33,53 +37,37 @@ function App() {
         {/* Routing */}
         <Routes>
           <Route path="/" element={<Home />} />
+
+          {/* Admin */}
+
+          {/* customer */}
           <Route path="/pages/customer/login" element={<CustomerLogin />} />
-          <Route path="/pages/customer/register" element={<CustomerRegister />} />
-          <Route path="/pages/partner/register" element={<PartnerRegister />} />
-          <Route path="/pages/products" element={<Products />} />
+          <Route
+            path="/pages/customer/register"
+            element={<CustomerRegister />}
+          />
           <Route path="/pages/customer/profile" element={<CustomerProfile />} />
+
+          {/* Merchant & Shipper */}
+          <Route path="/pages/partner/register" element={<PartnerRegister />} />
+
+          {/* Merchant */}
+          <Route
+            path="/pages/partner/merchant/dashboard"
+            element={<MerchantProductManagement />}
+          />
+          <Route
+            path="/pages/partner/merchant/addProduct"
+            element={<MerchantAddProductManagement />}
+          />
+
+          {/* Global */}
+          <Route path="/pages/products" element={<Products />} />
         </Routes>
         {/* Routing */}
       </Provider>
     </div>
   );
-  // return (
-  //   <div className="App">
-  //     <Provider store={store}>
-  //       {location.pathname === "/pages/customer/login" ||
-  //       location.pathname === "/pages/customer/register" ||
-  //       location.pathname === "/pages/partner/register" ||
-  //       location.pathname === "/pages/register" ? (
-  //         ""
-  //       ) : (
-  //         <Navbar />
-  //       )}
-
-  //       {/* Routing */}
-  //       <Routes>
-  //         <Route path="/" element={<Home />} />
-  //         <Route path="/pages/customer/login" element={<CustomerLogin />} />
-  //         <Route
-  //           path="/pages/customer/register"
-  //           element={<CustomerRegister />}
-  //         />
-  //         <Route path="/pages/partner/register" element={<PartnerRegister />} />
-  //         <Route path="/pages/products" element={<Products />} />
-  //         <Route path="/pages/customer/profile" element={<CustomerProfile />} />
-  //       </Routes>
-  //       {/* Routing */}
-
-  //       {location.pathname === "/pages/customer/login" ||
-  //       location.pathname === "/pages/customer/register" ||
-  //       location.pathname === "/pages/partner/register" ||
-  //       location.pathname === "/pages/register" ? (
-  //         ""
-  //       ) : (
-  //         <Footer />
-  //       )}
-  //     </Provider>
-  //   </div>
-  // );
 }
 
 export default App;

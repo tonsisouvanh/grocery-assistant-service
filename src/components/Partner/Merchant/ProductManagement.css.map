@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,4BAA4B,CAAA;EACxB,SAAS,EAAE,GAAG;CASjB;;AAVD,AAEI,4BAFwB,CAExB,sBAAsB,CAAA;EAClB,SAAS,EAAE,IAAI;CAMlB;;AATL,AAIQ,4BAJoB,CAExB,sBAAsB,CAElB,YAAY,CAAA;EACR,SAAS,EAAE,IAAI;EACf,WAAW,ECOb,gBAAgB,EAAE,UAAU;EDN1B,OAAO,EAAE,aAAa;CACzB",
+    "sources": [
+        "ProductManagement.scss",
+        "../../../Style/_variable.scss"
+    ],
+    "names": [],
+    "file": "ProductManagement.css"
+}

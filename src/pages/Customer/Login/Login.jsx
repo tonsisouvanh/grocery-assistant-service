@@ -44,16 +44,24 @@ const Login = () => {
     setPassword(password);
   };
 
+  const handleAccountType = (e) => {
+    setAccountType(e.target.value);
+  };
+
   const handleLogin = (e) => {
     e.preventDefault();
     setLoading(true);
 
     form.current.validateAll();
-
     if (checkBtn.current.context._errors.length === 0) {
       dispatch(login(username, password, accountType))
         .then(() => {
-          naviagte("/");
+          if (accountType === '1') naviagte("/admin");
+          else if (accountType === '2')
+            naviagte("/pages/partner/merchant/dashboard");
+          else if (accountType === '3') naviagte("/shipper");
+          else naviagte("/");
+
           // window.location.reload();
         })
         .catch(() => {
@@ -62,10 +70,6 @@ const Login = () => {
     } else {
       setLoading(false);
     }
-  };
-
-  const handleAccountType = (e) => {
-    setAccountType(e.target.value);
   };
 
   return (
@@ -92,7 +96,6 @@ const Login = () => {
                   <option value={2}>Merchant</option>
                   <option value={3}>Shipper</option>
                 </select>
-
               </div>
               <div className="input-field">
                 <label htmlFor="username">Username</label>

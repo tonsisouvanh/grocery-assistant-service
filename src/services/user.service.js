@@ -8,7 +8,7 @@ const getPublicContent = () => {
   return axios.get(API_URL + "accounts");
 };
 
-const getUserBoard = (username, acctType) => {
+const getCustomerBoard = (username, acctType) => {
   return axios.get(API_URL + `KhachHangs/profile?username=${username}&acctType=${acctType}`, { headers: authHeader() });
 };
 
@@ -22,7 +22,7 @@ const getAdminBoard = () => {
 
 export default {
   getPublicContent,
-  getUserBoard,
+  getCustomerBoard,
   getModeratorBoard,
   getAdminBoard,
 };
