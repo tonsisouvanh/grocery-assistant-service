@@ -6,11 +6,15 @@ import ProductList from "../../components/Product/Products/ProductList";
 // CONTEXT
 // import ProductContext from "../components/ContextApi/ProductContext";
 
-function Products({ products, addProduct }) {
+function Products({ products, addProduct, cloundinaryUrl }) {
   return (
     <>
       <Navbar />
-      <ProductList products={products} addProduct={addProduct} />
+      <ProductList
+        products={products}
+        addProduct={addProduct}
+        cloundinaryUrl={cloundinaryUrl}
+      />
       <Footer />
     </>
   );

@@ -58,7 +58,7 @@ const Login = () => {
         .then(() => {
           if (accountType === '1') naviagte("/admin");
           else if (accountType === '2')
-            naviagte("/pages/partner/merchant/dashboard");
+            naviagte("/pages/partner/merchant/productManagement");
           else if (accountType === '3') naviagte("/shipper");
           else naviagte("/");
 
@@ -135,7 +135,7 @@ const Login = () => {
             </Link>
           </div>
           <div className="right-col-container">
-            <i class="fab fa-opencart"></i>
+            <i className="fab fa-opencart"></i>
             <p>Mua sắm ưu đãi!</p>
           </div>
         </div>

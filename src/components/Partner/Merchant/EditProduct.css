@@ -1,0 +1,56 @@
+.edit-product-container {
+  font-family: "Be Vietnam Pro", sans-serif;
+  min-width: 75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.edit-product-container .header-text {
+  margin: 0 0 5rem 0;
+}
+
+.edit-product-container .form-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 3rem 5rem;
+}
+
+.edit-product-container .form-wrapper .img-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.edit-product-container .form-wrapper .img-field .product-img {
+  max-width: 8rem;
+}
+
+.edit-product-container .form-wrapper .btn-signup {
+  border: none;
+  background-color: #3f51b5;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  max-width: 10rem;
+  height: 2.5rem;
+}
+/*# sourceMappingURL=EditProduct.css.map */

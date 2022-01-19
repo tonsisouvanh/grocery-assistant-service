@@ -46,7 +46,7 @@
   display: grid;
   -ms-grid-columns: 20% 80%;
       grid-template-columns: 20% 80%;
-  padding: 5rem 7rem;
+  padding: 1rem 7rem 2rem 7rem;
   gap: 2rem;
 }
 

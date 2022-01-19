@@ -1,26 +1,34 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+function ProCard({ name, price, img, cloundinaryUrl }) {
 
-export default function MediaCard() {
+  const formatting = (value) => {
+    return value.toLocaleString("en-US", {
+      style: "currency",
+      currency: "VND",
+    });
+  };
+
   return (
     <Card sx={{ maxWidth: 245 }}>
       <CardMedia
+        style={{objectFit: "cover" }}
         component="img"
-        height="180"
-        image="https://filebroker-cdn.lazada.vn/kf/S7eb9bd0ab41b477b8f752549595b2db4z.jpg"
+        height="200"
+        image={cloundinaryUrl + img}
         alt="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Banh snack
+        <Typography style={{fontSize: '1.2rem'}} gutterBottom variant="h5" component="div">
+          {name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          6000 vnd
+        <Typography style={{fontSize: '1.2rem'}} variant="body2" color="text.secondary">
+          {formatting(price)}
         </Typography>
       </CardContent>
       <CardActions>
@@ -30,3 +38,5 @@ export default function MediaCard() {
     </Card>
   );
 }
+
+export default ProCard;

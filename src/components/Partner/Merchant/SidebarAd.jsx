@@ -11,46 +11,56 @@ function SidebarAd() {
       <div className={Style["container"]}>
         <div className={Style["menu_links_wrapper"]}>
           <Link
-            to="/pages/partner/merchant/dashboard"
-            id={Style[pathname === "/pages/partner/merchant/dashboard" ? "menu_link_active" : ""]}
+            to="/pages/partner/merchant/productManagement"
+            id={
+              Style[
+                pathname === "/pages/partner/merchant/productManagement"
+                  ? "menu_link_active"
+                  : ""
+              ]
+            }
             className={Style["link"]}
           >
             <span>
-              <i id={Style["icon"]} class="fas fa-globe"></i>
+              <i id={Style["icon"]} className="fab fa-product-hunt"></i>
             </span>
             Ouẩn lý sản phẩm
           </Link>
+
           <Link
             id={
               Style[
-                pathname === "/pages/partner/merchant/addProduct" ? "menu_link_active" : ""
+                pathname === "/pages/partner/merchant/addProduct"
+                  ? "menu_link_active"
+                  : ""
               ]
             }
             to="/pages/partner/merchant/addProduct"
             className={Style["link"]}
           >
             <span>
-              <i id={Style["icon"]} class="fas fa-user"></i>
+              <i id={Style["icon"]} className="fas fa-plus-circle"></i>
             </span>
             Thêm sản phẩm
           </Link>
+
           <Link
             id={
               Style[
-                pathname === "/admin/admin-delivery-company-page"
+                pathname === "/pages/partner/merchant/ordersManagement"
                   ? "menu_link_active"
                   : ""
               ]
             }
-            to="/admin/admin-delivery-company-page"
+            to="/pages/partner/merchant/ordersManagement"
             className={Style["link"]}
           >
             <span>
-              <i id={Style["icon"]} class="fas fa-truck"></i>
+              <i id={Style["icon"]} className="fas fa-clipboard"></i>
             </span>
-            Delivery Company
+            Quản lý đơn hàng
           </Link>
-          <Link
+          {/* <Link
             id={
               Style[
                 pathname === "/admin/admin-service-packages-page"
@@ -62,7 +72,7 @@ function SidebarAd() {
             className={Style["link"]}
           >
             <span>
-              <i id={Style["icon"]} class="fas fa-cubes"></i>
+              <i id={Style["icon"]} className="fas fa-cubes"></i>
             </span>
             Service Packages
           </Link>
@@ -78,10 +88,10 @@ function SidebarAd() {
             className={Style["link"]}
           >
             <span>
-              <i id={Style["icon"]} class="fas fa-coins"></i>
+              <i id={Style["icon"]} className="fas fa-coins"></i>
             </span>
             Income
-          </Link>
+          </Link> */}
         </div>
       </div>
     </>

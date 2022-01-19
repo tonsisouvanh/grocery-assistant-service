@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./ProductRelate.css";
 import ReactPaginate from "react-paginate";
 function ProductRelate({products}) {
-  console.log(products);
   // const [pageNumber, setPageNumber] = useState(0);
   // const imgPerPage = 5;
   // const pageCount = Math.ceil(images.length / imgPerPage);

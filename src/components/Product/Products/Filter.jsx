@@ -12,7 +12,7 @@ function Filter({ filter, setFilter, handleFilter }) {
     <>
       <div className="sort">
         <div className="sort-feature">
-          <p>
+          {/* <p>
             SHOW:
             <span className="numbers">
               <select name="" id="" value="">
@@ -22,7 +22,7 @@ function Filter({ filter, setFilter, handleFilter }) {
                 <option value="3">24</option>
               </select>
             </span>
-          </p>
+          </p> */}
           <p>
             SORT BY:
             <span className="Featured">

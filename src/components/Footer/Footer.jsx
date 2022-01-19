@@ -47,15 +47,15 @@ const Footer = () => {
           <div className="col contact">
             <h2>LIÊN HỆ</h2>
             <div className="contact-row">
-              <i class="fas fa-home"></i>
+              <i className="fas fa-home"></i>
               <p>Lô A, Khu Dân Cư Cityland, 99 Nguyễn Thị Thập</p>
             </div>
             <div className="contact-row">
-              <i class="fas fa-envelope"></i>
+              <i className="fas fa-envelope"></i>
               <p>example@gmail.com</p>
             </div>
             <div className="contact-row">
-              <i class="fas fa-phone-alt"></i>
+              <i className="fas fa-phone-alt"></i>
               <p>028 6298 9757</p>
             </div>
           </div>

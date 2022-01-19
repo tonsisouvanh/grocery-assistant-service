@@ -33,7 +33,7 @@ const formatting = (value) => {
   return value.toLocaleString("en-US", { style: "currency", currency: "VND" });
 };
 
-function ProductManagement() {
+function OrdersManagement() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [products, setProducts] = useState([]);
@@ -149,4 +149,4 @@ function ProductManagement() {
   );
 }
 
-export default ProductManagement;
+export default OrdersManagement;

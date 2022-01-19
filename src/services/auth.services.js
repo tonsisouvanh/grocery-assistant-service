@@ -20,7 +20,7 @@ const registerMerchant = (
     tench: storeName,
     diachi: storeAddress,
     sdt: storePhone,
-    nhanviench: [
+    nhanvienChes: [
       {
         tennv: fullname,
         email: email,

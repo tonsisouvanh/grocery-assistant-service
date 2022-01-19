@@ -1,0 +1,24 @@
+@import "../../../Style/variable";
+
+.add-product-container {
+  font-family: $vietnam;
+  min-width: 75rem;
+  @include flexRow(center, center);
+
+  .header-text {
+    margin: 0 0 5rem 0;
+  }
+  .form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 5rem;
+
+    .input-field {
+      // margin-bottom: 1rem;
+    }
+
+    .btn-signup {
+      @include buttonStyle($btnBgCorlor, 0.5rem, $white, 10rem, 2.5rem);
+    }
+  }
+}

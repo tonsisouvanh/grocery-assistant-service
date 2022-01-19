@@ -144,14 +144,14 @@ const Register = ({ userType, img }) => {
       inp_Type: "text",
       inp_Value: MerchantState.phone,
       inp_Validations: ([required], [vphoneNumber]),
-      inp_PlaceHolder: "Số điện thoại",
+      inp_PlaceHolder: "Số điện thoại cá nhân",
     },
     {
       inp_Name: "address",
       inp_Type: "text",
       inp_Value: MerchantState.address,
       inp_Validations: [required],
-      inp_PlaceHolder: "Địa chỉ",
+      inp_PlaceHolder: "Địa chỉ cá nhân",
     },
     {
       inp_Name: "department",

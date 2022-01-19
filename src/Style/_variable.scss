@@ -5,6 +5,8 @@ $white: #ffffff;
 $black: #222222;
 $colorPlaceholder: #93989b;
 $colorBorderBottom: #d8d8d8;
+$btnBgCorlor: #3f51b5;
+$btnFontColor: #131A21;
 // $gray-text: #969696;
 // $footer-bg: #F8F8F8;
 // $card-text: #4A4A4A;
@@ -25,4 +27,14 @@ $vietnam: "Be Vietnam Pro", sans-serif;
   flex-direction: column;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin buttonStyle($backgroundColor, $borderRadius, $color, $width, $height) {
+  border: none;
+  background-color: $backgroundColor;
+  border-radius: $borderRadius;
+  font-weight: bold;
+  color: $color;
+  max-width: $width;
+  height: $height;
 }

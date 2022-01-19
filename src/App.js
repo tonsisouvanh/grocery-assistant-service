@@ -25,8 +25,49 @@ import PartnerRegister from "./pages/Partner/Register/Register";
 // MERCHANT
 import MerchantProductManagement from "./pages/Partner/Merchant/Dashboard/ProductManagement";
 import MerchantAddProductManagement from "./pages/Partner/Merchant/Dashboard/AddProductPage";
+import MerchantEditProductManagement from "./pages/Partner/Merchant/Dashboard/EditProductPage";
 
 import Products from "./pages/Product/Products";
+import OrdersManagementPage from "./pages/Partner/Merchant/Dashboard/OrdersManagementPage";
+
+const cloundinaryUrl =
+  "https://res.cloudinary.com/shoppin/image/upload/v1642118462/";
+
+const customer_routes = [
+  {
+    path: "/pages/customer/login",
+    component: <CustomerLogin />,
+  },
+  {
+    path: "/pages/customer/register",
+    component: <CustomerRegister />,
+  },
+  {
+    path: "/pages/customer/profile",
+    component: <CustomerProfile />,
+  },
+];
+
+const merchant_routes = [
+  {
+    path: "/pages/partner/merchant/productManagement",
+    component: <MerchantProductManagement />,
+  },
+  {
+    path: "/pages/partner/merchant/addProduct",
+    component: <MerchantAddProductManagement />,
+  },
+  {
+    path: "/pages/partner/merchant/editProduct/:id",
+    component: (
+      <MerchantEditProductManagement cloundinaryUrl={cloundinaryUrl} />
+    ),
+  },
+  {
+    path: "/pages/partner/merchant/ordersManagement",
+    component: <OrdersManagementPage />,
+  },
+];
 
 function App() {
   const location = useLocation();
@@ -41,28 +82,21 @@ function App() {
           {/* Admin */}
 
           {/* customer */}
-          <Route path="/pages/customer/login" element={<CustomerLogin />} />
-          <Route
-            path="/pages/customer/register"
-            element={<CustomerRegister />}
-          />
-          <Route path="/pages/customer/profile" element={<CustomerProfile />} />
-
-          {/* Merchant & Shipper */}
-          <Route path="/pages/partner/register" element={<PartnerRegister />} />
+          {customer_routes.map(({ path, component }, key) => (
+            <Route key={key} path={path} element={component} />
+          ))}
 
           {/* Merchant */}
-          <Route
-            path="/pages/partner/merchant/dashboard"
-            element={<MerchantProductManagement />}
-          />
-          <Route
-            path="/pages/partner/merchant/addProduct"
-            element={<MerchantAddProductManagement />}
-          />
+          {merchant_routes.map(({ path, component }, key) => (
+            <Route key={key} path={path} element={component} />
+          ))}
 
           {/* Global */}
-          <Route path="/pages/products" element={<Products />} />
+          <Route path="/pages/partner/register" element={<PartnerRegister />} />
+          <Route
+            path="/pages/products"
+            element={<Products cloundinaryUrl={cloundinaryUrl} />}
+          />
         </Routes>
         {/* Routing */}
       </Provider>

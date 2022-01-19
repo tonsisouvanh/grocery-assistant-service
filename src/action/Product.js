@@ -1,13 +1,69 @@
-import { FETCH_ALL, SET_MESSAGE } from "./types";
+import { FETCH_ALL, SET_MESSAGE, CREATE, DELETE, UPDATE } from "./types";
 
 import ProductService from "../services/product.service";
 
-export const getAllProducts = () => (dispatch) => {
-  return ProductService.getAllProducts().then(
+// export const getAllProducts = () => (dispatch) => {
+//   return ProductService.getAllProducts().then(
+//     (response) => {
+//       dispatch({
+//         type: FETCH_ALL,
+//         payload: response.data,
+//       });
+
+//       return Promise.resolve();
+//     },
+//     (error) => {
+//       const message =
+//         (error.response &&
+//           error.response.data &&
+//           error.response.data.message) ||
+//         error.message ||
+//         error.toString();
+
+//       dispatch({
+//         type: SET_MESSAGE,
+//         payload: message,
+//       });
+
+//       return Promise.reject();
+//     }
+//   );
+// };
+
+// export const getAllProductType = () => (dispatch) => {
+//   return ProductService.getAllProductType().then(
+//     (response) => {
+//       dispatch({
+//         type: FETCH_ALL,
+//         payload: response.data,
+//       });
+
+//       return Promise.resolve();
+//     },
+//     (error) => {
+//       const message =
+//         (error.response &&
+//           error.response.data &&
+//           error.response.data.message) ||
+//         error.message ||
+//         error.toString();
+
+//       dispatch({
+//         type: SET_MESSAGE,
+//         payload: message,
+//       });
+
+//       return Promise.reject();
+//     }
+//   );
+// };
+
+export const deleteProduct = (productId) => (dispatch) => {
+  return ProductService.deleteProduct(productId).then(
     (response) => {
       dispatch({
-        type: FETCH_ALL,
-        payload: response.data,
+        type: DELETE,
+        payload: { data: response.data },
       });
 
       return Promise.resolve();
@@ -29,6 +85,103 @@ export const getAllProducts = () => (dispatch) => {
     }
   );
 };
+
+export const addProduct =
+  (
+    productName,
+    description,
+    unit,
+    price,
+    storageQty,
+    storeId,
+    productType,
+    imageId
+  ) =>
+  (dispatch) => {
+    return ProductService.addProduct(
+      productName,
+      description,
+      unit,
+      price,
+      storageQty,
+      storeId,
+      productType,
+      imageId
+    ).then(
+      (response) => {
+        dispatch({
+          type: CREATE,
+          payload: { data: response.data },
+        });
+
+        return Promise.resolve();
+      },
+      (error) => {
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+
+        dispatch({
+          type: SET_MESSAGE,
+          payload: message,
+        });
+
+        return Promise.reject();
+      }
+    );
+  };
+export const editProduct =
+  (
+    productId,
+    productName,
+    description,
+    unit,
+    price,
+    storageQty,
+    storeId,
+    productType,
+    imageId
+  ) =>
+  (dispatch) => {
+    return ProductService.editProduct(
+      productId,
+      productName,
+      description,
+      unit,
+      price,
+      storageQty,
+      storeId,
+      productType,
+      imageId
+    ).then(
+      (response) => {
+        dispatch({
+          type: SET_MESSAGE,
+          payload: "Update success!",
+        });
+
+        return Promise.resolve();
+      },
+      (error) => {
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+
+        dispatch({
+          type: SET_MESSAGE,
+          payload: message,
+        });
+
+        return Promise.reject();
+      }
+    );
+  };
 //   export const registerShipper =
 //     (
 //       fullname,

@@ -35,9 +35,9 @@ function ProductDetail({ products, id }) {
         <div className="grid-container">
           <div className="col img-col">
             <div className="mini-img-wrapper">
-              <i onClick={prevImages} class="fas fa-chevron-up"></i>
+              <i onClick={prevImages} className="fas fa-chevron-up"></i>
               {displayImg}
-              <i onClick={nextImages} class="fas fa-chevron-down"></i>
+              <i onClick={nextImages} className="fas fa-chevron-down"></i>
             </div>
             <div className="main-img">
               {displayImg.map(
@@ -64,11 +64,11 @@ function ProductDetail({ products, id }) {
             </Link>
             <h3 className="props name">{product ? product.name : ""}</h3>
             <div className="props rating-container">
-              <i id="none" class="fas fa-star"></i>
-              <i id="none" class="fas fa-star"></i>
-              <i id="none" class="fas fa-star"></i>
-              <i id="none" class="fas fa-star"></i>
-              <i id="none" class="fas fa-star"></i>
+              <i id="none" className="fas fa-star"></i>
+              <i id="none" className="fas fa-star"></i>
+              <i id="none" className="fas fa-star"></i>
+              <i id="none" className="fas fa-star"></i>
+              <i id="none" className="fas fa-star"></i>
             </div>
             <p className="props price">
               {product

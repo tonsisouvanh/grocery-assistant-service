@@ -21,11 +21,11 @@ function TopbarAd() {
           <img className={Style["logo"]} src={logo} alt="logo" />
         </div>
         <div className={Style["profile_wrapper"]}>
-          <i id={Style["fa-envelope"]} class="far fa-envelope"></i>
-          <i id={Style["fa-bell"]} class="far fa-bell"></i>
+          <i id={Style["fa-envelope"]} className="far fa-envelope"></i>
+          <i id={Style["fa-bell"]} className="far fa-bell"></i>
           <img className={Style["avatar"]} src={avatar} alt=""></img>
           <p id={Style["name"]}>James Coner</p>
-          <i onClick={handleLogout} id={Style["fa-sign-out-alt"]} class="fas fa-sign-out-alt"></i>
+          <i onClick={handleLogout} id={Style["fa-sign-out-alt"]} className="fas fa-sign-out-alt"></i>
         </div>
       </div>
     </>

@@ -29,7 +29,7 @@ const Navbar = () => {
 
         <div className="profile-cart-wrapper">
           <div className="profile-container">
-            <i class="far fa-user"></i>
+            <i className="far fa-user"></i>
             {isLoggedIn ? (
               <Link className="link" to="/pages/customer/profile">
                 <p>Xem thông tin</p>
@@ -44,7 +44,7 @@ const Navbar = () => {
           <div className="cart-container">
             <div className="cart-wrapper">
               <Link to="#" className="link cart-link">
-                <i class="fas fa-shopping-cart"></i>
+                <i className="fas fa-shopping-cart"></i>
                 <p>Giỏ hàng</p>
               </Link>
             </div>

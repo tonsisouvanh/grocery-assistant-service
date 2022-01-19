@@ -7,7 +7,7 @@ function UserAd() {
         <div className={Style["user_wrapper"]}>
           <h1 className={Style["h1"]}>Users</h1>
           <div className={Style["add_wrapper"]}>
-            <i id={Style["fa-search"]} class="fas fa-search"></i>
+            <i id={Style["fa-search"]} className="fas fa-search"></i>
             <input
               className={Style["search_input"]}
               placeholder="Search..."

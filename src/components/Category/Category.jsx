@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { categories } from "./categories";
 import "./Category.css";
 import { Link } from "react-router-dom";
+
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+import productService from "../../services/product.service";
 const Category = () => {
+  const [value, setValue] = useState("");
+  const [productType, setProductType] = useState([]);
+  const text = "hey";
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  useEffect(() => {
+    productService.getAllProductType().then((res) => {
+      setProductType((res && res.data) || []);
+    });
+  }, []);
+
+  console.log(productType);
   return (
     <>
       <div className="category-container">
